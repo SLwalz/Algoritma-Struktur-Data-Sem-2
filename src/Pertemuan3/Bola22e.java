@@ -11,7 +11,7 @@ package Pertemuan3;
 public class Bola22e {
     public double jariBola22E;
     
-    public Bola22e(int jrb){
+    public Bola22e(double jrb){
         jariBola22E=jrb;
     }
     
