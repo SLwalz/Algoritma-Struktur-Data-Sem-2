@@ -8,6 +8,7 @@ package Pertemuan5BruteConquer;
  *
  * @author Farisa
  */
+import java.time.LocalTime;
 import java.util.*;
 public class FaktorialMain22 {
     public static void main(String[] args) {
@@ -28,11 +29,17 @@ public class FaktorialMain22 {
         for (int i=0;i<elemen;i++){
             System.out.println("Faktorial dari nilai "+fk22E[i].nilai22E+" adalah : "+fk22E[i].faktorialBF22E(fk22E[i].nilai22E));
         }
+
+        LocalTime currentTime = LocalTime.now();
+        System.out.println("Current time: " + currentTime);
         System.out.println("==================================================================");
         System.out.println("Hasil Faktorial dengan Divide dan Conquer");
         for (int i=0;i<elemen;i++){
             System.out.println("Faktorial dari nilai "+fk22E[i].nilai22E+" adalah : "+fk22E[i].faktorialDC22E(fk22E[i].nilai22E));
         }
+
+        LocalTime currentTime2 = LocalTime.now();
+        System.out.println("Current time: " + currentTime2);
         System.out.println("==================================================================");
     }
 }

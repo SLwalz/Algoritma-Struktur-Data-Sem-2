@@ -19,23 +19,44 @@ public class MainPangkat22e {
         Pangkat22E[] png22e = new Pangkat22E[elemen];
         
         for (int i=0;i<elemen;i++){
-            png22e[i]=new Pangkat22E();
+//            png22e[i]=new Pangkat22E();
+//            System.out.print("Masukkan nilai yang akan dipangkatkan ke-"+(i+1)+" : ");
+//            png22e[i].nilai22e = kemal22.nextInt();
+//            System.out.print("Masukkan nilai pemangkat ke-"+(i+1)+" : ");
+//            png22e[i].pangkat22e = kemal22.nextInt();
             System.out.print("Masukkan nilai yang akan dipangkatkan ke-"+(i+1)+" : ");
-            png22e[i].nilai22e = kemal22.nextInt();
+            int nilai22e = kemal22.nextInt();
             System.out.print("Masukkan nilai pemangkat ke-"+(i+1)+" : ");
-            png22e[i].pangkat22e = kemal22.nextInt();
+            int pangkat22e = kemal22.nextInt();
+            png22e[i]=new Pangkat22E(nilai22e,pangkat22e);
         }
         
         System.out.println("====================================================");
+        System.out.println("Ingin Pakai Algoritma apa?");
+        System.out.print("1. Brute Force\n2. Divide Conquer\nmenu : ");
+        int menu22e = kemal22.nextInt();
+        
+        switch (menu22e) {
+            case 1:
+        System.out.println("====================================================");
         System.out.println("Hasil Pangkat dengan Brute Force");
         for (int i=0;i<elemen;i++){
-            System.out.println("Nilai "+png22e[i].nilai22e+" pangkat "+png22e[i].pangkat22e+" adalah : "+png22e[i].pangkatBF22e(png22e[i].nilai22e, png22e[i].pangkat22e));
+            System.out.println("Nilai "+png22e[i].nilai22e+" pangkat "
+                    +png22e[i].pangkat22e+" adalah : "
+                    +png22e[i].pangkatBF22e(png22e[i].nilai22e, png22e[i].pangkat22e));
         }
+        System.out.println("====================================================");
+            break;
+            case 2:
         System.out.println("====================================================");
         System.out.println("Hasil Pangkat dengan Divide Conquer");
         for (int i=0;i<elemen;i++){
-            System.out.println("Nilai "+png22e[i].nilai22e+" pangkat "+png22e[i].pangkat22e+" adalah : "+png22e[i].pangkatDC22e(png22e[i].nilai22e, png22e[i].pangkat22e));
+            System.out.println("Nilai "+png22e[i].nilai22e+
+                    " pangkat "+png22e[i].pangkat22e+" adalah : "
+                    +png22e[i].pangkatDC22e(png22e[i].nilai22e, png22e[i].pangkat22e));
         }
         System.out.println("====================================================");
+            break;
+        }
     }
 }

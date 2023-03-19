@@ -10,6 +10,11 @@ package Pertemuan5BruteConquer;
  */
 public class Pangkat22E {
     public int nilai22e, pangkat22e;
+
+    Pangkat22E(int nl, int pgkt) {
+        nilai22e=nl;
+        pangkat22e=pgkt;
+    }
     
     public int pangkatBF22e(int a, int n){
         int hasil22e=1;
