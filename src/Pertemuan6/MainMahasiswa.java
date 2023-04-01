@@ -27,16 +27,16 @@ public class MainMahasiswa {
         System.out.println("Data Mahasiswa sebelum sorting = ");
         list22e.tampil();
         
-        System.out.println("Data Mahasiswa setelah sorting desc berdasarkan ipk");
-        list22e.bubbleSort();
-        list22e.tampil();
+//        System.out.println("Data Mahasiswa setelah sorting desc berdasarkan ipk");
+//        list22e.bubbleSort();
+//        list22e.tampil();
+//        
+//        System.out.println("Data Mahasiswa setelah sorting asc berdasarkan ipk");
+//        list22e.selectionSort();
+//        list22e.tampil();
         
         System.out.println("Data Mahasiswa setelah sorting asc berdasarkan ipk");
-        list22e.selectionSort();
+        list22e.insertionSort();
         list22e.tampil();
-        
-//        System.out.println("Data Mahasiswa setelah sorting asc berdasarkan ipk");
-//        list22e.insertionSort();
-//        list22e.tampil();
     }
 }

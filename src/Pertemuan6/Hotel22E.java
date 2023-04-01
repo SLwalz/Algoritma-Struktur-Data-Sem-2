@@ -11,9 +11,9 @@ package Pertemuan6;
 public class Hotel22E {
     String nama22e, kota22e;
     int harga22e;
-    byte bintang22e;
+    int bintang22e;
 
-    Hotel22E(String nm, String kt, int hrg, byte btg) {
+    Hotel22E(String nm, String kt, int hrg, int btg) {
         this.nama22e = nm;
         this.kota22e = kt;
         this.harga22e = hrg;
@@ -21,11 +21,10 @@ public class Hotel22E {
     }
     
     void tampil22e(){
-        System.out.println("Hotel "+nama22e);
+        System.out.println("- Hotel "+nama22e);
         System.out.println("Kota "+kota22e);
         System.out.println("Harga per-malam = "+harga22e);
         System.out.println("Bintang : "+bintang22e);
     }
-    
     
 }
