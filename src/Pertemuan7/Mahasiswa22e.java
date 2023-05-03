@@ -16,11 +16,15 @@ public class Mahasiswa22e {
         this.umur22e = u;
         this.ipk22e = i;
     }
+
+    Mahasiswa22e(int nim) {
+        this.nim22e = nim;
+    }
     
     void tampil22e(){
-        System.out.println("Nim = "+nim22e);
+        System.out.println("Nim  = "+nim22e);
         System.out.println("Nama = "+nama22e);
         System.out.println("Umur = "+umur22e);
-        System.out.println("IPK = "+ipk22e);
+        System.out.println("IPK  = "+ipk22e);
     }    
 }
