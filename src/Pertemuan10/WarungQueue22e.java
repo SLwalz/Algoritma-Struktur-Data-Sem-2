@@ -35,9 +35,9 @@ public class WarungQueue22e {
         }
     }
     
-    public void Enqueue(Pembeli22e dt){
+    public void Enqueue(Pembeli22e a){
         if (IsFull()){
-            System.out.println("Queue sudah penuh");
+            System.out.println("Antrian sudah penuh");
         } else {
             if(IsEmpty()){
                 front22e = rear22e = 0;
@@ -48,17 +48,17 @@ public class WarungQueue22e {
                     rear22e++;
                 }
             }
-            antrian22e[rear22e]=dt;
+            antrian22e[rear22e] = a;
             size22e++;
         }
     }
     
-    public int Dequeue(){
-        Pembeli22e dt = new Pembeli22e();
+    public Pembeli22e Dequeue(){
+        Pembeli22e x = new Pembeli22e();
         if(IsEmpty()){
-            System.out.println("Queue masih kosong");
+            System.out.println("Antrian masih kosong");
         } else {
-            dt = antrian22e[front22e];
+            x = antrian22e[front22e];
             size22e--;
             if (IsEmpty()){
                 front22e = rear22e = -1;
@@ -70,30 +70,56 @@ public class WarungQueue22e {
                 }
             }
         }
-        return dt;
+        return x;
     }
     
     public void peek(){
         if (!IsEmpty()){
-            System.out.println("Elemen terdepan "+antrian22e[front22e].nama22e+" "+antrian22e[front22e].noHP22e);
+            System.out.println("Antrian terdepan \nnama: "+
+                    antrian22e[front22e].nama22e+"\nno Hp: "+antrian22e[front22e].noHP22e);
         } else {
-            System.out.println("Queue masih kosong");
+            System.out.println("Antrian masih kosong");
         }
     }
     
     public void peekRear(){
         if (!IsEmpty()){
-            System.out.println("Elemen terdepan "+antrian22e[rear22e].nama22e+" "+antrian22e[rear22e].noHP22e);
+            System.out.println("Antrian paling belakang \nnama: "+
+                    antrian22e[rear22e].nama22e+"\nno Hp: "+antrian22e[rear22e].noHP22e);
         } else {
-            System.out.println("Queue masih kosong");
+            System.out.println("Antrian masih kosong");
         }
     }
     
-    public void peekPosition(){
-        
+    public int peekPosition(String nama){
+        boolean check = false;
+        int posisi = 0;
+        for(int i=0; i<size22e; i++){
+            if(nama.equalsIgnoreCase(antrian22e[i].nama22e)){
+                check=true;
+                posisi=i+1;
+                break;
+            }
+        }
+        if(check==true){
+            return posisi;
+        } else {
+            return 0;
+        }
     }
     
     public void daftarPembeli(){
-        
+        if(IsEmpty()){
+            System.out.println("Antrian masih kosong"); 
+        } else {
+            System.out.println("nama\tno HP");
+            int i = front22e;
+            while (i != rear22e){
+                System.out.println(antrian22e[i].nama22e+"\t"+antrian22e[i].noHP22e);
+                i = (i+1)%max22e;
+            }
+            System.out.println(antrian22e[i].nama22e+"\t"+antrian22e[i].noHP22e);
+            System.out.println("Jumlah Antrian = "+size22e);
+        }
     }
 }

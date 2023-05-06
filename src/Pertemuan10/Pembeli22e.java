@@ -12,11 +12,11 @@ public class Pembeli22e {
     String nama22e;
     int noHP22e;
 
-    public Pembeli22e(String nm, int hp) {
+    Pembeli22e(String nm, int hp) {
         this.nama22e = nm;
         this.noHP22e = hp;
     }
 
-    public Pembeli22e() {
+    Pembeli22e() {
     }
 }
